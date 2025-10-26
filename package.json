@@ -1,0 +1,51 @@
+{
+  "name": "@aulgn/builder",
+  "version": "0.0.1",
+  "description": "Plugin builder",
+  "keywords": [
+    "builder",
+    "api"
+  ],
+  "homepage": "https://github.com/aulgn/builder#readme",
+  "bugs": {
+    "url": "https://github.com/aulgn/builder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aulgn/builder.git"
+  },
+  "license": "MIT",
+  "author": "aulgn",
+  "type": "module",
+  "main": "./dist/aulgn-builder.cjs",
+  "module": "./dist/aulgn-builder.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/aulgn-builder.mjs",
+      "require": "./dist/aulgn-builder.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.8",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^24.8.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.52.4",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aulgn/types": "file:../types",
+    "archiver": "^7.0.1",
+    "eventemitter3": "^5.0.1"
+  }
+}
