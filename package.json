@@ -38,14 +38,15 @@
     "@rollup/plugin-commonjs": "^28.0.8",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.1.4",
+    "@types/archiver": "^7.0.0",
     "@types/node": "^24.8.0",
     "rimraf": "^6.0.1",
     "rollup": "^4.52.4",
+    "tslib": "^2.8.1",
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@aulgn/types": "file:../types",
-    "archiver": "^7.0.1",
-    "eventemitter3": "^5.0.1"
+    "archiver": "^7.0.1"
   }
 }
